@@ -11,8 +11,42 @@ Cuerpo Inter
 */
 
 /* Estilos generales */
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
 html{
     font-size: 62.5%;
+}
+
+.content{
+    background-color: #8762b6;
+}
+
+.content h2{
+    text-align:center;
+    padding: 2rem 0rem;
+}
+
+.content:last-of-type{
+    padding-bottom: 4rem;
+}
+
+article{
+    padding: 2rem 4rem;
+
+    display:flex;
+    flex-direction: column;
+}
+
+article p{
+    margin: 1rem 0rem;
+}
+
+.content-list, .center{
+    text-align:center;
 }
 
 /* Fondo */
@@ -35,6 +69,24 @@ li{
 
 nav ul li a:hover{
     color: #91CDFF;
+}
+
+header{
+    padding: 2rem 4rem;
+    border-bottom: 1px solid #8762b6; 
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav ul {
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
 }
 
 /* Animación subrayado para el menú (no me pude resistir) */
@@ -62,6 +114,30 @@ nav ul li a:hover::after {
     transform-origin: bottom left;
 }
 
+/* Footer */
+footer{
+    padding: 2rem 4rem;
+    border-top: 1px solid #8762b6; 
+
+    display:flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer section{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+footer img{
+    width: 3rem;
+    height: 3rem;
+}
+
 /* Textos */
 /* Title */
 .title, h1, h2, h3, h4{
@@ -73,15 +149,22 @@ nav ul li a:hover::after {
 h1{
     font-size:3.5rem;
     color: #D8BAFF;
+    padding: 2rem 4rem 0rem;
+    text-align: center;
 }
 
 /* Title */
-.title, h2{
+.title, h2, .subtitle{
     font-size: 3rem;
     color: #D8BAFF;
 }
 
 /* Subtitle */
+.subtitle{
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
 h3{
     font-size: 2.5rem;
     color: #91CDFF;
@@ -92,6 +175,14 @@ h3{
 h4, button, .button, .button-secondary{
     font-size: 2rem;
     color: #FFDAFF;
+}
+
+h4{
+    margin-top: 2rem;
+}
+
+.body-text{
+    padding: 0rem 4rem;
 }
 
 /* Texto tipo copete */
@@ -108,6 +199,8 @@ h4, button, .button, .button-secondary{
 
 form input, form textarea, form select{
     color: #303030;
+    margin: 1rem;
+    padding: 1rem;
 }
 
 .strong{
@@ -116,19 +209,392 @@ form input, form textarea, form select{
 
 /* Botones */
 button, .button{
+    display:inline-block;
+    width:fit-content;
+
     border: 1px solid #D8BAFF;
     border-radius: 50px;
     background-color: #D8BAFF;
     color: #303030;
 
     font-weight: bold; 
+    padding: 1rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
 
 .button-secondary{
+    display:inline-block;
+    width:fit-content;
+
     border: 1px solid rgb(113, 71, 169);
     border-radius: 50px;
     background-color: rgba(113, 71, 169, 0.5);
     color: #E0E0E0;
 
     font-size:1.3rem;
+    padding: 1rem;
+
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.button-center{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0rem;
+}
+
+button:hover, .button:hover {
+    transform: translateY(-3px);
+    background-color: #e5d0ff;
+    box-shadow: 0 0 15px rgba(216, 186, 255, 0.8), 
+                0 0 30px rgba(145, 205, 255, 0.4);
+}
+
+/* Imágenes */
+.hero img, .content img{
+    width:100%;
+    height:100%;
+
+    border-radius: 15px;
+}
+
+.content img{
+    padding:1rem 0rem;
+}
+
+.hero img{
+    border-radius: 0px;
+    display:block;
+}
+
+figure {
+    margin: 0;
+    margin-block-start: 0;
+    margin-block-end: 0;
+    margin-inline-start: 0;
+    margin-inline-end: 0;
+}
+
+/* iframe */
+iframe{
+    width: 80%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    border: none;
+    
+    display:block;
+    margin:0 auto;
+}
+
+/* Form productos */
+form{
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Productos Tienda - Albumes Discografía */
+.products, .albumes {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    flex-wrap: wrap;
+    padding: 4rem;
+}
+
+.albumes{
+    padding: 0rem;
+}
+
+.product, .album {
+    border: 1px solid #463162;
+    border-radius: 25px;
+    background-color: #463162;
+    max-width: 320px; 
+    width: 100%;
+
+    padding:2rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.product:hover, .album:hover {
+    transform: translateY(-4px);
+    border-color: #D8BAFF;
+}
+
+.album{
+    max-width: 500px;
+}
+
+.product figure, .album figure {
+    width: 100%;
+    height: 200px; 
+    overflow: hidden;
+    border-radius: 15px;
+    margin-bottom: 1rem;
+}
+
+.product img, .album img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.product button, .album button {
+    margin-top: auto;
+    align-self: center;
+}
+
+.featuredAlbum {
+    width: 100%;
+    max-width: 100%;
+    
+    background: linear-gradient(135deg, #952929 0%, #3d1c1c 100%);
+    border-radius: 0px;
+    padding: 3rem;
+
+    margin-bottom: 2rem;
+}
+
+.featuredAlbum h3, .featuredAlbum h4, .album h3, .album h4, .new h3, p, h1{
+    margin-bottom: 1rem;
+}
+
+.featuredAlbum img {
+    width: 100%;
+    max-width: 380px;
+    height: auto;
+    border-radius: 15px;
+    margin: 1.5rem auto;
+}
+
+.featuredAlbum ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    margin: 1.5rem 0;
+}
+
+.featuredAlbum li {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    padding: 0.8rem 1.2rem;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-radius: 10px;
+}
+
+.featuredAlbum li .body-text {
+    flex-grow: 1; 
+    padding: 0;
+    font-weight: 600;
+}
+
+/* Noticias y Eventos */
+.news {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: stretch;
+    gap: 2.5rem;
+    flex-wrap: wrap;
+    padding: 2rem 4rem;
+}
+
+.new {
+    border: 1px solid #463162;
+    border-radius: 25px;
+    background-color: #463162;
+    max-width: 550px; 
+    width: 100%;
+    
+    padding: 2.5rem;
+    display: flex;
+    flex-direction: column;
+
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.new:hover {
+    transform: translateY(-4px);
+    border-color: #D8BAFF;
+}
+
+.new iframe {
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    border: none;
+    margin-top: 1rem;
+}
+
+.new .button, 
+.new .button-secondary {
+    margin-top: auto;
+    align-self: flex-start;
+}
+
+.event-img-container{
+    width: 100%;
+    max-height: 250px;
+    overflow: hidden;
+    border-radius: 15px;
+    margin: 1.5rem 0;
+}
+
+.featuredNew {
+    width: 100%;
+    background: linear-gradient(135deg, #463162 0%, #221535 100%);
+    border-radius: 25px;
+    padding: 3rem;
+    margin-bottom: 3rem;
+    box-shadow: 0 0 25px rgba(145, 205, 255, 0.25);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.gallery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.featuredNew img{
+    width: 100%;
+    height: 500px;
+    object-fit: contain;
+    border-radius: 8px;
+    margin-bottom: 0.8rem;
+}
+
+/* FAQ */
+.faq-container {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0rem 4rem;
+}
+
+.faq {
+    border: 1px solid #463162;
+    border-radius: 25px;
+    background-color: #463162;
+    padding: 2rem;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.25);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.faq:hover {
+    transform: translateY(-4px);
+    border-color: #D8BAFF;
+}
+
+/* Formulario de contacto */
+.contact {
+    max-width: 650px;
+    margin: 2rem auto;
+    padding: 3.5rem;
+    background: linear-gradient(135deg, #463162 0%, #291c3d 100%);
+    border: 1px solid rgba(216, 186, 255, 0.3);
+    border-radius: 25px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+
+    justify-content: unset;
+    align-items: unset;
+}
+
+.contact div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+}
+
+.contact label {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 600;
+    font-size: 1.6rem;
+    color: #91CDFF;
+}
+
+.contact input[type="text"],
+.contact input[type="email"],
+.contact select,
+.contact textarea {
+    width: 100%;
+    margin: 0;
+    padding: 1.2rem 1.6rem;
+    
+    background-color: rgba(18, 20, 20, 0.6);
+    border: 1.5px solid rgba(216, 186, 255, 0.3);
+    border-radius: 12px;
+    
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    color: #E0E0E0;
+    
+    outline: none;
+    transition: border-color 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.contact input::placeholder,
+.contact textarea::placeholder {
+    color: #8f8f8f;
+}
+
+.contact select {
+    cursor: pointer;
+    appearance: none; 
+    background-repeat: no-repeat;
+    background-position: right 1.2rem center;
+    background-size: 2rem;
+}
+
+.contact select option {
+    background-color: #291c3d;
+    color: #E0E0E0;
+}
+
+.contact input[type="text"]:focus,
+.contact input[type="email"]:focus,
+.contact select:focus,
+.contact textarea:focus {
+    border-color: #91CDFF;
+    background-color: rgba(18, 20, 20, 0.9);
+    box-shadow: 0 0 12px rgba(145, 205, 255, 0.4);
+}
+
+.contact textarea {
+    resize: vertical;
+    min-height: 120px;
+}
+
+.contact input[type="submit"].button {
+    align-self: center;
+    margin-top: 1rem;
+    padding: 1.2rem 3rem;
+    cursor: pointer;
 }
