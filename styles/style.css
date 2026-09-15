@@ -27,11 +27,7 @@ html{
 
 .content h2{
     text-align:center;
-    padding: 2rem 0rem;
-}
-
-.content:last-of-type{
-    padding-bottom: 4rem;
+    padding: 2.5rem;
 }
 
 article{
@@ -41,11 +37,11 @@ article{
     flex-direction: column;
 }
 
-article p{
+article p, .content-list{
     margin: 1rem 0rem;
 }
 
-.content-list, .center{
+.center{
     text-align:center;
 }
 
@@ -83,10 +79,14 @@ header{
 
 nav ul {
     display:flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
-    align-items: center;
-    gap: 2rem;
+    align-items: end;
+
+    font-family: 'Montserrat', sans-serif;
+    font-weight: bold;
+    font-size: 2rem;
+    color: #D8BAFF;
 }
 
 /* Animación subrayado para el menú (no me pude resistir) */
@@ -123,6 +123,7 @@ footer{
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+    gap:2rem;
 }
 
 footer section{
@@ -147,7 +148,7 @@ footer img{
 
 /* Main TItle */
 h1{
-    font-size:3.5rem;
+    font-size:2.8rem;
     color: #D8BAFF;
     padding: 2rem 4rem 0rem;
     text-align: center;
@@ -155,25 +156,25 @@ h1{
 
 /* Title */
 .title, h2, .subtitle{
-    font-size: 3rem;
+    font-size: 2.2rem;
     color: #D8BAFF;
 }
 
 /* Subtitle */
 .subtitle{
-    font-size: 2.5rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
 h3{
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: #91CDFF;
 }
 
 /* Subsubtitle & button text */
 
 h4, button, .button, .button-secondary{
-    font-size: 2rem;
+    font-size: 1.6rem;
     color: #FFDAFF;
 }
 
@@ -187,13 +188,14 @@ h4{
 
 /* Texto tipo copete */
 .body-subtext{
-    font-size: 1.4rem;
+    font-size: 1.3rem;
     color: #d5e8eb;
     font-style: italic;
 }
 
 /* Texto secundario */
 .body-secondary{
+    font-size: 1.4rem;
     color: #91CDFF;
 }
 
@@ -217,8 +219,9 @@ button, .button{
     background-color: #D8BAFF;
     color: #303030;
 
-    font-weight: bold; 
-    padding: 1rem;
+    font-weight: bold;
+    text-align: center; 
+    padding: 1rem 1.8rem;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -233,7 +236,7 @@ button, .button{
     color: #E0E0E0;
 
     font-size:1.3rem;
-    padding: 1rem;
+    padding: 0.8rem 2em;
 
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
 }
@@ -255,9 +258,9 @@ button:hover, .button:hover {
 /* Imágenes */
 .hero img, .content img{
     width:100%;
-    height:100%;
+    height:auto;
 
-    border-radius: 15px;
+    border-radius: 25px;
 }
 
 .content img{
@@ -297,19 +300,34 @@ form{
     align-items: center;
 }
 
-/* Productos Tienda - Albumes Discografía */
-.products, .albumes {
-    display: flex;
+.search-container{
+    display:flex;
     flex-direction: row;
     justify-content: center;
-    align-items: stretch;
+    align-items: center;
+    gap: 1rem;
+
+    padding-top: 1rem;
+}
+
+/* Productos Tienda - Albumes Discografía */
+.products {
+    display: grid;
+    grid-template-columns: 1fr;
     gap: 2rem;
-    flex-wrap: wrap;
-    padding: 4rem;
+    padding: 2rem 1.5rem;
+    justify-items: center;
 }
 
 .albumes{
     padding: 0rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: start;
+    flex-wrap: wrap;
+    gap: 2rem;
+    padding: 2rem 1.5rem;
 }
 
 .product, .album {
@@ -364,7 +382,7 @@ form{
     
     background: linear-gradient(135deg, #952929 0%, #3d1c1c 100%);
     border-radius: 0px;
-    padding: 3rem;
+    padding: 4rem;
 
     margin-bottom: 2rem;
 }
@@ -391,6 +409,7 @@ form{
 .featuredAlbum li {
     display: flex;
     flex-wrap: wrap;
+    justify-content: end;
     align-items: center;
     gap: 1rem;
     padding: 0.8rem 1.2rem;
@@ -473,7 +492,7 @@ form{
 
 .gallery{
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
     gap: 2rem;
@@ -481,7 +500,6 @@ form{
 
 .featuredNew img{
     width: 100%;
-    height: 500px;
     object-fit: contain;
     border-radius: 8px;
     margin-bottom: 0.8rem;
@@ -511,12 +529,8 @@ form{
 
 /* Formulario de contacto */
 .contact {
-    max-width: 650px;
-    margin: 2rem auto;
     padding: 3.5rem;
     background: linear-gradient(135deg, #463162 0%, #291c3d 100%);
-    border: 1px solid rgba(216, 186, 255, 0.3);
-    border-radius: 25px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     
     display: flex;
@@ -543,7 +557,8 @@ form{
 .contact input[type="text"],
 .contact input[type="email"],
 .contact select,
-.contact textarea {
+.contact textarea,
+.grid-shop input {
     width: 100%;
     margin: 0;
     padding: 1.2rem 1.6rem;
@@ -561,7 +576,8 @@ form{
 }
 
 .contact input::placeholder,
-.contact textarea::placeholder {
+.contact textarea::placeholder,
+.grid-shop input::placeholder {
     color: #8f8f8f;
 }
 
@@ -581,7 +597,8 @@ form{
 .contact input[type="text"]:focus,
 .contact input[type="email"]:focus,
 .contact select:focus,
-.contact textarea:focus {
+.contact textarea:focus,
+.grid-shop input:focus {
     border-color: #91CDFF;
     background-color: rgba(18, 20, 20, 0.9);
     box-shadow: 0 0 12px rgba(145, 205, 255, 0.4);
@@ -597,4 +614,171 @@ form{
     margin-top: 1rem;
     padding: 1.2rem 3rem;
     cursor: pointer;
+}
+
+/* Grid */
+.grid-index{
+    display: grid;
+    grid-template-areas:
+        "title"
+        "hero"
+        "welcome"
+        "cards";
+    grid-template-columns: 1fr;
+}
+
+.grid-shop{
+    display: grid;
+    grid-template-areas:
+        "title"
+        "description"
+        "hero"
+        "search"
+        "products"
+        "more";
+    grid-template-columns: 1fr;
+}
+
+.grid-discografia{
+    display: grid;
+    grid-template-areas:
+        "title"
+        "description"
+        "hero"
+        "albumes"
+        "more";
+    grid-template-columns: 1fr;
+}
+
+.grid-events{
+    display: grid;
+    grid-template-areas:
+        "title"
+        "description"
+        "hero"
+        "news"
+        "agenda";
+    grid-template-columns: 1fr;
+}
+
+.grid-contact{
+    display: grid;
+    grid-template-areas:
+        "title"
+        "description"
+        "hero"
+        "map"
+        "faq"
+        "contact";
+    grid-template-columns: 1fr;
+}
+
+/* Defino las areas */
+.area-title{
+    grid-area: title;
+}
+.area-hero{
+    grid-area: hero;
+}
+.area-welcome{
+    grid-area: welcome;
+}
+.area-cards{
+    grid-area: cards;
+}
+.area-description{
+    grid-area: description;
+}
+.area-search{
+    grid-area: search;
+}
+.area-products{
+    grid-area: products;
+}
+.area-more{
+    grid-area: more;
+}
+.area-albumes{
+    grid-area: albumes;
+}
+.area-news{
+    grid-area: news;
+}
+.area-agenda{
+    grid-area: agenda;
+}
+.area-map{
+    grid-area: map;
+}
+.area-faq{
+    grid-area: faq;
+}
+.area-contact{
+    grid-area: contact;
+}
+
+@media (min-width: 768px) {
+    .grid-shop{
+        grid-template-areas:
+            "title title"
+            "description description"
+            "hero hero"
+            "search search"
+            "products products"
+            "more more";
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .products{
+        grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+        gap: 2rem;
+        padding: 4rem;
+    }
+
+    .featuredAlbum {
+        grid-column: 1 / -1;
+    }
+
+    .gallery{
+        flex-direction: row;
+        flex:1;
+    }
+
+    .featuredNew {
+        grid-column: 1 / -1;
+    }
+
+    .featuredNew img {
+        height: 300px;
+    }
+
+    .faq-container {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(380px, 1fr));
+        gap: 2rem;
+        margin: 0 auto;
+        padding: 2rem;
+    }
+}
+
+
+@media (min-width: 1024px) {
+    .area-cards{
+        display:grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+    }
+
+    nav ul{
+        flex-direction: row;
+        gap:2rem;
+    }
+
+    .body-text{
+        padding: 0rem 4rem;
+    }
+
+    .featuredNew img {
+        height: 500px;
+    }
 }
