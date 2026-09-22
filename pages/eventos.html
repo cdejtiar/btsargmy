@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../assets/images/army.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +13,34 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../assets/images/army-white.png" width="50px" height="100px" alt="Logo de BTS Argentina">
-        </a>
-        
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./discografia.html">Discografía</a></li>
-                <li><a href="./eventos.html">Eventos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid header">
+                <a href="../index.html">
+                    <img src="../assets/images/army-white.png" alt="Logo de BTS Argentina">
+                </a>
+                <button class="navbar-toggler bg-custom button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav containerMenu">
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./discografia.html">Discografía</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,7 +49,7 @@
         <p class="body-text strong center area-description">Explorá la agenda completa de actividades de ARGmy en Argentina, enterate de las últimas novedades globales del grupo y sumate a las iniciativas del fandom.</p>
 
         <figure class="hero area-hero">
-            <img src="../assets/images/eventos.jpeg" width="1920px" height="1080px" alt="Ilustración con el texto BTS Eventos Oficiales y Noticias sobre fondo morado con la bandera de BTS ARMY Fiesta, auriculares y el Obelisco">
+            <img class="img-fluid w-100"src="../assets/images/eventos.jpeg" alt="Ilustración con el texto BTS Eventos Oficiales y Noticias sobre fondo morado con la bandera de BTS ARMY Fiesta, auriculares y el Obelisco">
         </figure>
 
         <section class="content area-news">
@@ -42,7 +59,7 @@
                 <article class="new">
                     <h3>NORMAL Official MV Ya Disponible en YouTube</h3>
                     <p>¡Ya está disponible el esperado MV de "NORMAL" en el canal oficial de HYBE LABELS! Conectate a la transmisión oficial y apoyá con el streaming masivo desde Argentina.</p>
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/GEk4jHwfFTA?si=38BBHWcqW3p06-4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/GEk4jHwfFTA?si=38BBHWcqW3p06-4q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
                 </article>
 
                 <article class="new">
@@ -68,16 +85,26 @@
                 <article class="featuredNew">
                     <h3>¡Se definieron los banners oficiales!</h3>
                     <p>Los días 21, 23 y 24 de Octubre de 2026, el país se teñirá de morado para recibir a BTS. Para hacer de cada noche un momento inolvidable, compartimos los banners oficiales del Fan Action elegidos por y para la comunidad. Descargalos, preparate y sé parte del abrazo colectivo de ARGmy.Los días 21, 23 y 24 de Octubre de 2026, el país se teñirá de morado para recibir a BTS. Para hacer de cada noche un momento inolvidable, compartimos los banners oficiales del Fan Action elegidos por y para la comunidad. Descargalos, preparate y sé parte del abrazo colectivo de ARGmy.</p>
-                    <div class="gallery">
-                        <figure>
-                            <img src="../assets/images/agenda-banner21.webp" width="600px" height="800px" alt="Banner del Fan Action para el concierto del 21 de Octubre">
-                        </figure>
-                        <figure>
-                            <img src="../assets/images/agenda-banner23.webp" width="600px" height="800px" alt="Banner del Fan Action para el concierto del 23 de Octubre">
-                        </figure>
-                        <figure>
-                            <img src="../assets/images/agenda-banner24.webp" width="600px" height="800px" alt="Banner del Fan Action para el concierto del 24 de Octubre">
-                        </figure>
+                    <div id="carouselGallery" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner">
+                            <div class="carousel-item active"data-bs-interval="10000">
+                                <img src="../assets/images/agenda-banner21.webp" class="d-block w-100" alt="Banner del Fan Action para el concierto del 21 de Octubre">
+                            </div>
+                            <div class="carousel-item" data-bs-interval="2000">
+                                <img src="../assets/images/agenda-banner23.webp" class="d-block w-100" alt="Banner del Fan Action para el concierto del 23 de Octubre">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../assets/images/agenda-banner24.webp" class="d-block w-100" alt="Banner del Fan Action para el concierto del 24 de Octubre">
+                            </div>
+                        </div>
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselGallery" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselGallery" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
                     </div>
 
                     <div class="button-center">
@@ -85,25 +112,27 @@
                     </div>
                 </article>
 
-                <article class="new">
-                    <h3>¿Ya tenés tus freebies?</h3>
-                    <p>¡Nos reunimos para ultimar detalles para los shows próximos de BTS en nuestro país! Vení a disfrutar haciendo freebies junto a otras ARGmys.</p>
-                    <p class="body-subtext">Fecha: 22 y 23 de Agosto del 2026</p>
-                    <p class="body-subtext">Lugar: Barrio Chino, Buenos Aires</p>
-                    <figure class="event-img-container">
-                        <img src="../assets/images/eventos-freebies.jpeg" width="600px" height="800px" alt="Ilustración con el texto Freebies y la fecha 22 y 23 de Agosto del 2026 sobre fondo morado con íconos de sobres de mensajes, libro de FAQ, reloj y elementos de BTS">
-                    </figure>
-                </article>
+                <div class="moreNews">
+                    <article class="new">
+                        <h3>¿Ya tenés tus freebies?</h3>
+                        <p>¡Nos reunimos para ultimar detalles para los shows próximos de BTS en nuestro país! Vení a disfrutar haciendo freebies junto a otras ARGmys.</p>
+                        <p class="body-subtext">Fecha: 22 y 23 de Agosto del 2026</p>
+                        <p class="body-subtext">Lugar: Barrio Chino, Buenos Aires</p>
+                        <figure class="event-img-container">
+                            <img class="img-fluid w-100" src="../assets/images/eventos-freebies.jpeg" width="600px" height="800px" alt="Ilustración con el texto Freebies y la fecha 22 y 23 de Agosto del 2026 sobre fondo morado con íconos de sobres de mensajes, libro de FAQ, reloj y elementos de BTS">
+                        </figure>
+                    </article>
 
-                <article class="new">
-                    <h3>Streaming Party "NORMAL" MV</h3>
-                    <p>Unite a la transmisión oficial del MV de "NORMAL" y apoyá a BTS con un streaming masivo desde Argentina.</p>
-                    <p class="body-subtext">Fecha: 27 de Agosto del 2026</p>
+                    <article class="new">
+                        <h3>Streaming Party "NORMAL" MV</h3>
+                        <p>Unite a la transmisión oficial del MV de "NORMAL" y apoyá a BTS con un streaming masivo desde Argentina.</p>
+                        <p class="body-subtext">Fecha: 27 de Agosto del 2026</p>
 
-                    <div class="button-center">
-                        <a class="button-secondary" href="https://www.youtube.com/watch?v=GEk4jHwfFTA" target="_blank">Ver MV en YouTube</a>
-                    </div>
-                </article>
+                        <div class="button-center">
+                            <a class="button-secondary" href="https://www.youtube.com/watch?v=GEk4jHwfFTA" target="_blank">Ver MV en YouTube</a>
+                        </div>
+                    </article>
+                </div>
             </div>
         </section>
 
@@ -127,5 +156,6 @@
             </a>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

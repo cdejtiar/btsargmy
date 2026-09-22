@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="./styles/style.css">
     <link rel="shortcut icon" href="./assets/images/army.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,30 +13,53 @@
 </head>
 <body>
     <header>
-        <a href="./index.html">
-            <img src="./assets/images/army-white.png" width="50px" height="100px" alt="Logo de BTS Argentina">
-        </a>
-        
-        <nav>
-            <ul>
-                <li><a href="./index.html">Inicio</a></li>
-                <li><a href="./pages/tienda.html">Tienda</a></li>
-                <li><a href="./pages/discografia.html">Discografía</a></li>
-                <li><a href="./pages/eventos.html">Eventos</a></li>
-                <li><a href="./pages/contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid header">
+                <a href="./index.html">
+                    <img src="./assets/images/army-white.png" alt="Logo de BTS Argentina">
+                </a>
+                <button class="navbar-toggler bg-custom button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav containerMenu">
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" aria-current="page" href="./index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./pages/tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./pages/discografia.html">Discografía</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./pages/eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./pages/contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
     <main class="grid-index">
         <h1 class="area-title">BTS Argentina Oficial</h1>
 
-        <figure class="hero area-hero">
-                <img src="./assets/images/index.jpeg" width="1920px" height="1080px" alt="Los siete integrantes de BTS sonriendo junto al texto BTS Argentina Bienvenidos ARGmy, con el Obelisco y Caminito de fondo">
-            </figure>
+        <div id="carouselExampleSlidesOnly" class="carousel slide hero area-hero" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="./assets/images/index.jpeg" class="d-block w-100" alt="Los siete integrantes de BTS sonriendo junto al texto BTS Argentina Bienvenidos ARGmy, con el Obelisco y Caminito de fondo">
+                </div>
+                <div class="carousel-item">
+                    <img src="./assets/images/index2.jpeg" class="d-block w-100" alt="Los siete integrantes de BTS posan en un ventanal con vistas al Obelisco de Buenos Aires junto al texto ¡Súmate a la comunidad en Argentina!">
+                </div>
+            </div>
+        </div>
 
         <section class="content area-welcome">
-            <h2>Bienvenidx a BTS Argentina: la comunidad oficial de fans celebrando la conexión de la banda con nuestro país.</h2>
+            <h2>Bienvenidos a BTS Argentina: la comunidad oficial de fans celebrando la conexión de la banda con nuestro país.</h2>
             <article>
                 <h3 class="center">Lo que encontrarás en BTS Argentina</h3>
                 <ul class="center content-list">
@@ -47,20 +71,28 @@
             </article>
         </section>
 
-        <section class="content area-cards">
-            <article>
-                <h3>Últimas novedades de ARGmy</h3>
-                <p class="strong">Noticias globales del grupo, lanzamientos, proyectos locales y eventos de la comunidad en Argentina.</p>
-
-                <a class="button" href="./pages/eventos.html">Ver agenda y últimas noticias</a>
-            </article>
-
-            <article>
-                <h3>Comunidad ARGmy en Buenos Aires</h3>
-                <figure>
-                    <img src="./assets/images/argmy.jpeg" width="1920px" height="1080px" alt="ARMYs argentinas en el Obelisco ilumninado de morado">
-                </figure>
-            </article>
+        <section class="row content area-cards">
+            <div class="col-sm-6 mb-3 mb-sm-0">
+                <div class="card myCard">
+                <div class="card-body">
+                    <h3>Últimas novedades de ARGmy</h3>
+                    <p>Noticias globales del grupo, lanzamientos, proyectos locales y eventos de la comunidad en Argentina.</p>
+                    <a href="#" class="button">Ver más</a>
+                </div>
+                </div>
+            </div>
+            <div class="col-sm-6">
+                <div class="card myCard">
+                <div class="card-body">
+                    <h3>Comunidad ARGmy en Buenos Aires</h3>
+                    <p>Descubre la vibrante comunidad de fans de BTS en la Ciudad de Buenos Aires.</p>
+                    <figure>
+                        <img class="img-fluid w-100" src="./assets/images/argmy.jpeg" alt="ARMYs argentinas en el Obelisco ilumninado de morado">
+                    </figure>
+                    <a href="#" class="button">Ver más</a>
+                </div>
+                </div>
+            </div>
         </section>
     </main>
 
@@ -79,5 +111,6 @@
             </a>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

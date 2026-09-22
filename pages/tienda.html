@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../assets/images/army.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +13,34 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../assets/images/army-white.png" width="50px" height="100px" alt="Logo de BTS Argentina">
-        </a>
-        
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./discografia.html">Discografía</a></li>
-                <li><a href="./eventos.html">Eventos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid header">
+                <a href="../index.html">
+                    <img src="../assets/images/army-white.png" alt="Logo de BTS Argentina">
+                </a>
+                <button class="navbar-toggler bg-custom button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav containerMenu">
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./discografia.html">Discografía</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,7 +49,7 @@
         <p class="body-text strong center area-description">¡Bienvenido a nuestra tienda oficial! Aquí encontrarás todo el merchandising y álbumes de BTS Argentina.</p>
 
         <figure class="hero area-hero">
-                <img src="../assets/images/tienda.jpeg" width="1920px" height="1080px" alt="Ilustración con el texto Tienda sobre un fondo morado con photocards, lightstick, libros de BTS, el Obelisco y casas de Caminito">
+                <img class="img-fluid w-100" src="../assets/images/tienda.jpeg" alt="Ilustración con el texto Tienda sobre un fondo morado con photocards, lightstick, libros de BTS, el Obelisco y casas de Caminito">
         </figure>
 
         <section class="content area-search">
@@ -41,7 +58,7 @@
                 <label for="search">Buscá tu producto favorito:</label>
                 <div class="search-container">
                     <input type="text" placeholder="Buscar álbum, merch..." name="search" id="search">
-                    <button type="submit">Buscar</button>
+                    <button class="button" type="submit">Buscar</button>
                 </div>
             </form>
         </section>
@@ -52,45 +69,45 @@
                 <article class="product">
                     <h3>Álbum "BE" (Deluxe Edition)</h3>
                     <figure>
-                        <img src="../assets/images/album-be.webp" width="200px" height="200px" alt="Álbum BE Deluxe Edition de BTS">
+                        <img class="img-fluid w-100" src="../assets/images/album-be.webp" alt="Álbum BE Deluxe Edition de BTS">
                     </figure>
                     <p class="body-subtext">Edición Deluxe importada de Corea del Sur</p>
                     <p>Incluye <span class="strong">CD, photobook, photocards y póster.</span></p>
                     <p class="body-secondary">Precio: $115.000 ARS</p>
-                    <button type="button">Agregar al carrito</button>
+                    <button class="button" type="button">Agregar al carrito</button>
                 </article>
 
                 <article class="product">
                     <h3>Lightstick Oficial ARMY Bomb Ver. 4</h3>
                     <figure>
-                        <img src="../assets/images/lightstick-ver4.webp" width="200px" height="200px" alt="Lightstick Oficial ARMY Bomb Ver. 4">
+                        <img class="img-fluid w-100" src="../assets/images/lightstick-ver4.webp" alt="Lightstick Oficial ARMY Bomb Ver. 4">
                     </figure>
                     <p class="body-subtext">Lightstick oficial con Bluetooth y efectos de luz</p>
                     <p>Con <span class="strong">Bluetooth y efectos de luz</span> sincronizados con los conciertos.</p>
                     <p class="body-secondary">Precio: $145.000 ARS</p>
-                    <button type="button">Agregar al carrito</button>
+                    <button class="button" type="button">Agregar al carrito</button>
                 </article>
 
                 <article class="product">
                     <h3>Zip-up Hoodie BTS World Tour ARIRANG</h3>
                     <figure>
-                        <img src="../assets/images/tour-merch-hoodie.webp" width="200px" height="200px" alt="Buzo con cierre oficial del Tour ARIRANG de BTS">
+                        <img class="img-fluid w-100" src="../assets/images/tour-merch-hoodie.webp" alt="Buzo con cierre oficial del Tour ARIRANG de BTS">
                     </figure>
                     <p class="body-subtext">Merchandise oficial del tour ARIRANG en frisa pesada</p>
                     <p>Camisetas, hoodies y accesorios <span class="strong">exclusivos del tour.</span></p>
                     <p class="body-secondary">Precio: $98.000 ARS</p>
-                    <button type="button">Agregar al carrito</button>
+                    <button class="button" type="button">Agregar al carrito</button>
                 </article>
 
                 <article class="product">
                     <h3>Peluche BT21</h3>
                     <figure>
-                        <img src="../assets/images/bt21-plush.png" width="200px" height="200px" alt="Peluche BT21 a elección de línea Line Friends">
+                        <img class="img-fluid w-100" src="../assets/images/bt21-plush.png" alt="Peluche BT21 a elección de línea Line Friends">
                     </figure>
                     <p class="body-subtext">Peluche oficial de personaje BT21 a elección</p>
                     <p>Incluye cualquiera de los personajes: <span class="strong">Tata, Chimmy, Cooky, RJ, Shooky, Mang, Koya y Van.</span></p>
                     <p class="body-secondary">Precio: $75.000 ARS</p>
-                    <button type="button">Agregar al carrito</button>
+                    <button class="button" type="button">Agregar al carrito</button>
                 </article>
             </div>
         </section>
@@ -115,5 +132,6 @@
             </a>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>

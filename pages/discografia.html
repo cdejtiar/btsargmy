@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
     <link rel="stylesheet" href="../styles/style.css">
     <link rel="shortcut icon" href="../assets/images/army.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -12,18 +13,34 @@
 </head>
 <body>
     <header>
-        <a href="../index.html">
-            <img src="../assets/images/army-white.png" width="50px" height="100px" alt="Logo de BTS Argentina">
-        </a>
-        
-        <nav>
-            <ul>
-                <li><a href="../index.html">Inicio</a></li>
-                <li><a href="./tienda.html">Tienda</a></li>
-                <li><a href="./discografia.html">Discografía</a></li>
-                <li><a href="./eventos.html">Eventos</a></li>
-                <li><a href="./contacto.html">Contacto</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-lg">
+            <div class="container-fluid header">
+                <a href="../index.html">
+                    <img src="../assets/images/army-white.png" alt="Logo de BTS Argentina">
+                </a>
+                <button class="navbar-toggler bg-custom button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                <ul class="navbar-nav containerMenu">
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" aria-current="page" href="../index.html">Inicio</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./tienda.html">Tienda</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./discografia.html">Discografía</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./eventos.html">Eventos</a>
+                    </li>
+                    <li class="nav-item">
+                    <a class="nav-link linkMenu" href="./contacto.html">Contacto</a>
+                    </li>
+                </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -32,119 +49,158 @@
         <p class="body-text strong center area-description">Un recorrido detallado por la historia musical de BTS: descubrí su discografía completa, explorá los tracklists y encontrá letras y fanchants en español.</p>
 
         <figure class="hero area-hero">
-            <img src="../assets/images/discografia.jpeg" width="1920px" height="1080px" alt="Ilustración con el texto Discografía Oficial rodeado de portadas de álbumes de BTS como Proof, BE y Young Forever, junto a vinilos y naipes">
+            <img class="img-fluid w-100" src="../assets/images/discografia.jpeg" alt="Ilustración con el texto Discografía Oficial rodeado de portadas de álbumes de BTS como Proof, BE y Young Forever, junto a vinilos y naipes">
         </figure>
 
-        <section class="content area-albumes">
+        <section class="content-albumes area-albumes">
             <h2>Álbumes</h2>
             <div>
                 <article class="featuredAlbum">
                     <h3 class="center">ARIRANG - Latest Realese</h3>
-                    <img src="../assets/images/arirang.jpg" width="500px" height="500px" alt="Portada del quinto álbum de estudio ARIRANG">
+                    <img class="img-fluid w-100" src="../assets/images/arirang.jpg" alt="Portada del quinto álbum de estudio ARIRANG">
                     <p>Inspirado en el <span class="strong">himno tradicional coreano</span>, ARIRANG representa la <span class="strong">resiliencia, la memoria colectiva y la reconexión de BTS con ARMY</span> tras su período de receso. El álbum combina <span class="strong">sonidos conceptuales modernos con instrumentos tradicionales</span>, celebrando una nueva etapa de madurez musical.</p>
                     <p class="body-subtext">Fecha de lanzamiento: 20 de Marzo de 2026</p>
 
-                    <h4>Tracklist</h4>
-                    <ul>
-                        <li>
-                            <span class="body-text">Body to Body</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-body-to-body-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34594" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">Hooligan</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-hooligan-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34595" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">Aliens</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-aliens-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34596" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">FYA</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-fya-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34597" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">2.0</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-20-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34598" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">No. 29</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-no-29-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34599" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">SWIM</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-swim-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34350" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">Merry Go Round</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-merry-go-round-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34600" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">NORMAL</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-normal-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34602" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">Like Animals</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-like-animals-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34603" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">they don't know 'bout us</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-they-dont-know-bout-us-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34604" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">One More Night</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-one-more-night-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34605" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">Please</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-please-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34606" target="_blank">Ver fanchant</a>
-                        </li>
-                        <li>
-                            <span class="body-text">Into The Sun</span>
-                            <a class="button-secondary" href="https://genius.com/Bts-into-the-sun-lyrics" target="_blank">Ver letra</a>
-                            <a class="button-secondary" href="https://weverse.io/bts/notice/34607" target="_blank">Ver fanchant</a>
-                        </li>
-                    </ul>
+                    <div class="accordion accordion-flush my-3" id="accordionTracklist">
+                        <div class="accordion-item bg-transparent border-0">
+                            <h3 class="accordion-hero collapsed" id="headingTracklist" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTracklist" aria-expanded="false" aria-controls="collapseTracklist">
+                                <button class="accordion-button collapsed bg-transparent shadow-none px-0 subtitle" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTracklist" aria-expanded="false" aria-controls="collapseTracklist">
+                                    Tracklist Completo (14 Canciones)
+                                </button>
+                            </h3>
+                            <div id="collapseTracklist" class="accordion-collapse collapse" aria-labelledby="headingTracklist" data-bs-parent="#accordionTracklist">
+                                <div class="accordion-body px-0">
+                                    <ul class="d-flex flex-column gap-2 p-0 m-0">
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Body to Body</span>
+                                            <div class="d-flex gap-2 justify-content-end">
+                                                <a class="button-secondary" href="https://genius.com/Bts-body-to-body-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34594" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Hooligan</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-hooligan-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34595" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Aliens</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-aliens-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34596" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">FYA</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-fya-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34597" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">2.0</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-20-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34598" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">No. 29</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-no-29-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34599" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">SWIM</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-swim-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34350" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Merry Go Round</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-merry-go-round-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34600" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">NORMAL</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-normal-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34602" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Like Animals</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-like-animals-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34603" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">they don't know 'bout us</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-they-dont-know-bout-us-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34604" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">One More Night</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-one-more-night-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34605" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Please</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-please-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34606" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                        <li class="d-flex flex-wrap justify-content-between align-items-center p-3 rounded-3" style="background-color: rgba(255, 255, 255, 0.05);">
+                                            <span class="body-subtext fw-bold">Into The Sun</span>
+                                            <div class="d-flex gap-2">
+                                                <a class="button-secondary" href="https://genius.com/Bts-into-the-sun-lyrics" target="_blank">Ver letra</a>
+                                                <a class="button-secondary" href="https://weverse.io/bts/notice/34607" target="_blank">Ver fanchant</a>
+                                            </div>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
 
                     <h4>Escucha el álbum completo en Spotify</h4>
-                    <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/3ukkRHDHbN8tNRPKsGZR1h?utm_source=generator&si=af228f3370be4718" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                    <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/album/3ukkRHDHbN8tNRPKsGZR1h?utm_source=generator&si=af228f3370be4718" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                 </article>
 
                 <div class="albumes">
                     <article class="album">
                         <h3 class="center">Proof</h3>
-                        <img src="../assets/images/proof.png" width="500px" height="500px" alt="Portada del álbum antológico Proof de BTS">
+                        <img class="img-fluid w-100" src="../assets/images/proof.png" alt="Portada del álbum antológico Proof de BTS">
                         <p>Un proyecto antológico de <span class="strong">3 CDs</span> que condensa la historia de <span class="strong">9 años de BTS</span>, incluyendo sencillos clave elegidos por los miembros, temas inéditos en demo y un mensaje de gratitud para su público.</p>
                         <p class="body-subtext">Fecha de lanzamiento: 10 de junio de 2022</p>
 
                         <a class="button" href="https://ibighit.com/en/bts/discography/detail/proof" target="_blank">Ver más información de este álbum</a>
                         
                         <h4>Escucha el álbum completo en Spotify</h4>
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6al2VdKbb6FIz9d7lU7WRB?utm_source=generator&si=a46ea6431d814df2" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/album/6al2VdKbb6FIz9d7lU7WRB?utm_source=generator&si=a46ea6431d814df2" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </article>
 
                     <article class="album">
                         <h3 class="center">BE</h3>
-                        <img src="../assets/images/be.jpg" width="500px" height="500px" alt="Portada oficial del álbum BE de BTS">
+                        <img class="img-fluid w-100" src="../assets/images/be.jpg" alt="Portada oficial del álbum BE de BTS">
                         <p>Ante la incertidumbre global por la pandemia, BTS abrió sus emociones para transmitir un mensaje de consuelo y la premisa de que <span class="strong">"la vida continúa"</span>. Los siete integrantes participaron directamente en la <span class="strong">producción, música, concepto y diseño visual</span>.</p>
                         <p class="body-subtext">Fecha de lanzamiento: 20 de noviembre del 2020</p>
 
                         <a class="button" href="https://ibighit.com/en/bts/discography/detail/be" target="_blank">Ver más información de este álbum</a>
                         
                         <h4>Escucha el álbum completo en Spotify</h4>
-                        <iframe data-testid="embed-iframe" style="border-radius:12px" src="https://open.spotify.com/embed/album/6nYfHQnvkvOTNHnOhDT3sr?utm_source=generator&si=f8f2d301d7e342f1" width="100%" height="352" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
+                        <iframe data-testid="embed-iframe" src="https://open.spotify.com/embed/album/6nYfHQnvkvOTNHnOhDT3sr?utm_source=generator&si=f8f2d301d7e342f1" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture" loading="lazy"></iframe>
                     </article>
                 </div>
             </div>
@@ -170,5 +226,6 @@
             </a>
         </section>
     </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
