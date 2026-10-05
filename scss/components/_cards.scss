@@ -123,6 +123,33 @@
   }
 }
 
+.banner-preview {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: clamp(22rem, 30vw, 34rem);
+  overflow: hidden;
+  border-radius: $radius-sm;
+  background-color: $color-card-bg;
+
+  img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.event-progress {
+  height: 0.8rem;
+  background-color: $color-card-border;
+
+  .progress-bar {
+    background-color: $color-primario;
+  }
+}
+
 .search-icon-inside {
   position: absolute;
   left: 1.5rem;
