@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
-    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./css/style.css">
     <link rel="shortcut icon" href="./assets/images/army.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,105 +12,196 @@
     <title>BTS ARGmy - Home</title>
 </head>
 <body>
+
+    <!-- HEADER / NAV -->
     <header>
-        <nav class="navbar navbar-expand-lg">
-            <div class="container-fluid header">
-                <a href="./index.html">
-                    <img src="./assets/images/army-white.png" alt="Logo de BTS Argentina">
+        <nav class="navbar navbar-expand-lg header">
+            <div class="container-fluid px-4">
+                <a href="./index.html" class="navbar-brand">
+                    <img src="./assets/images/army-white.png" alt="Logo de BTS Argentina" class="logo-header">
                 </a>
                 <button class="navbar-toggler bg-custom button" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
+                    <span class="navbar-toggler-icon"></span>
                 </button>
                 <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-                <ul class="navbar-nav containerMenu">
-                    <li class="nav-item">
-                    <a class="nav-link linkMenu" aria-current="page" href="./index.html">Inicio</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link linkMenu" href="./pages/tienda.html">Tienda</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link linkMenu" href="./pages/discografia.html">Discografía</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link linkMenu" href="./pages/eventos.html">Eventos</a>
-                    </li>
-                    <li class="nav-item">
-                    <a class="nav-link linkMenu" href="./pages/contacto.html">Contacto</a>
-                    </li>
-                </ul>
+                    <ul class="navbar-nav containerMenu">
+                        <li class="nav-item">
+                            <a class="nav-link linkMenu active" aria-current="page" href="./index.html">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link linkMenu" href="./pages/tienda.html">Tienda</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link linkMenu" href="./pages/discografia.html">Discografía</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link linkMenu" href="./pages/eventos.html">Eventos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link linkMenu" href="./pages/contacto.html">Contacto</a>
+                        </li>
+                    </ul>
                 </div>
             </div>
         </nav>
     </header>
 
-    <main class="grid-index">
-        <h1 class="area-title">BTS Argentina Oficial</h1>
+    <!-- MAIN -->
+    <main class="grid-index container-fluid py-4 px-md-5">
 
-        <div id="carouselExampleSlidesOnly" class="carousel slide hero area-hero" data-bs-ride="carousel">
-            <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img src="./assets/images/index.jpeg" class="d-block w-100" alt="Los siete integrantes de BTS sonriendo junto al texto BTS Argentina Bienvenidos ARGmy, con el Obelisco y Caminito de fondo">
-                </div>
-                <div class="carousel-item">
-                    <img src="./assets/images/index2.jpeg" class="d-block w-100" alt="Los siete integrantes de BTS posan en un ventanal con vistas al Obelisco de Buenos Aires junto al texto ¡Súmate a la comunidad en Argentina!">
+        <section class="area-hero text-center myCard hero-card mb-5">
+            <span class="hero-tag mb-3">• COMUNIDAD OFICIAL DE FANS • ARGENTINA</span>
+            <h1 class="hero-title display-4 my-2">BTS Argentina Oficial</h1>
+            <p class="body-subtext mx-auto mb-4 hero-max-width">
+                Bienvenidos a BTS Argentina: la comunidad oficial de fans celebrando la conexión de la banda con nuestro país. Pasión albiceleste y amor eterno por BTS.
+            </p>
+            <div class="d-flex justify-content-center gap-3 mb-4 flex-wrap">
+                <a href="#comunidad" class="button">💜 Unirme a la Comunidad</a>
+                <a href="./pages/eventos.html" class="button-secondary">Ver Agenda de Eventos</a>
+            </div>
+
+            <!-- Carousel central -->
+            <div id="carouselExampleSlidesOnly" class="carousel slide hero-carousel overflow-hidden" data-bs-ride="carousel">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img src="./assets/images/index.jpeg" class="d-block w-100" alt="Los siete integrantes de BTS sonriendo junto al texto BTS Argentina Bienvenidos ARGmy">
+                    </div>
+                    <div class="carousel-item">
+                        <img src="./assets/images/index2.jpeg" class="d-block w-100" alt="Los siete integrantes de BTS posan en un ventanal con vistas al Obelisco de Buenos Aires">
+                    </div>
                 </div>
             </div>
-        </div>
-
-        <section class="content area-welcome">
-            <h2>Bienvenidos a BTS Argentina: la comunidad oficial de fans celebrando la conexión de la banda con nuestro país.</h2>
-            <article>
-                <h3 class="center">Lo que encontrarás en BTS Argentina</h3>
-                <ul class="center content-list">
-                    <li><span class="strong">Compras oficiales</span> sin intermediarios</li>
-                    <li>Acreditación para <span class="strong">eventos locales y festejos</span></li>
-                    <li>Noticias y novedades <span class="strong">al día</span> de la banda</li>
-                    <li><span class="strong">Guías musicales, discografía y fanchants</span> traducidos al español</li>
-                </ul>
-            </article>
         </section>
 
-        <section class="row content area-cards">
-            <div class="col-sm-6 mb-3 mb-sm-0">
-                <div class="card myCard">
-                <div class="card-body">
-                    <h3>Últimas novedades de ARGmy</h3>
-                    <p>Noticias globales del grupo, lanzamientos, proyectos locales y eventos de la comunidad en Argentina.</p>
-                    <a href="#" class="button">Ver más</a>
+        <section class="area-welcome mb-5">
+            <div class="text-center mb-4">
+                <span class="body-secondary text-uppercase fw-bold">PORTAL INTEGRAL FANBASE</span>
+                <h2 class="title mt-1">Lo que encontrarás en BTS Argentina</h2>
+            </div>
+
+            <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                <div class="col">
+                    <article class="myCard service-card h-100 d-flex flex-column justify-content-between p-4">
+                        <div>
+                            <span class="icon-box">🛍️</span>
+                            <h3 class="subtitle mb-2">Compras Oficiales</h3>
+                            <p class="body-text p-0 text-start">Importaciones grupales y pedidos directos de Merch oficial, Weverse, discos y álbumes sin intermediarios.</p>
+                        </div>
+                        <a href="./pages/tienda.html" class="card-action-link text-start mt-3">Explorar Tienda →</a>
+                    </article>
                 </div>
+                <div class="col">
+                    <article class="myCard service-card h-100 d-flex flex-column justify-content-between p-4">
+                        <div>
+                            <span class="icon-box">🪪</span>
+                            <h3 class="subtitle mb-2">Acreditación & Festejos</h3>
+                            <p class="body-text p-0 text-start">Pases fan, proyectos conmemorativos y acceso a eventos locales y festejos de cumpleaños.</p>
+                        </div>
+                        <a href="./pages/eventos.html" class="card-action-link text-start mt-3">Ver Acreditaciones →</a>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="myCard service-card h-100 d-flex flex-column justify-content-between p-4">
+                        <div>
+                            <span class="icon-box">📰</span>
+                            <h3 class="subtitle mb-2">Noticias al Día</h3>
+                            <p class="body-text p-0 text-start">Información y novedades al día de la banda, anuncios oficiales traducidos al español.</p>
+                        </div>
+                        <a href="./pages/eventos.html" class="card-action-link text-start mt-3">Últimas Noticias →</a>
+                    </article>
+                </div>
+                <div class="col">
+                    <article class="myCard service-card h-100 d-flex flex-column justify-content-between p-4">
+                        <div>
+                            <span class="icon-box">🎵</span>
+                            <h3 class="subtitle mb-2">Guías & Fanchants</h3>
+                            <p class="body-text p-0 text-start">Guías musicales, catálogo completo de discografía y fanchants fonéticos traducidos al español.</p>
+                        </div>
+                        <a href="./pages/discografia.html" class="card-action-link text-start mt-3">Ver Discografía →</a>
+                    </article>
                 </div>
             </div>
-            <div class="col-sm-6">
-                <div class="card myCard">
-                <div class="card-body">
-                    <h3>Comunidad ARGmy en Buenos Aires</h3>
-                    <p>Descubre la vibrante comunidad de fans de BTS en la Ciudad de Buenos Aires.</p>
-                    <figure>
-                        <img class="img-fluid w-100" src="./assets/images/argmy.jpeg" alt="ARMYs argentinas en el Obelisco ilumninado de morado">
-                    </figure>
-                    <a href="#" class="button">Ver más</a>
+        </section>
+
+        <section class="area-cards row g-4 mb-5" id="comunidad">
+            <!-- Novedades de ARGmy -->
+            <div class="col-lg-7">
+                <div class="mb-3">
+                    <span class="body-secondary text-uppercase fw-bold">ACTUALIDAD</span>
+                    <h2 class="title">Últimas novedades de ARGmy</h2>
+                    <p class="body-subtext">Noticias globales del grupo, lanzamientos, proyectos locales y eventos de la comunidad en Argentina.</p>
                 </div>
+
+                <div class="d-flex flex-column gap-3">
+                    <article class="myCard p-3">
+                        <span class="news-chip mb-2">Lanzamiento</span>
+                        <h3 class="subtitle mb-1">Nuevo álbum 'ARIRANG' y proyecto de streaming en Spotify AR</h3>
+                        <p class="body-text p-0 mb-0">Coordinación masiva de reproducción y metas alcanzadas en las listas oficiales de Argentina.</p>
+                    </article>
+                    <article class="myCard p-3">
+                        <span class="news-chip mb-2">Solidario</span>
+                        <h3 class="subtitle mb-1">Campaña solidaria 'One in An ARMY Argentina' en comedores</h3>
+                        <p class="body-text p-0 mb-0">Recaudación de útiles escolares y alimentos en conjunto con la comunidad local.</p>
+                    </article>
+                    <article class="myCard p-3">
+                        <span class="news-chip mb-2">Eventos</span>
+                        <h3 class="subtitle mb-1">Funciones especiales de cines en Buenos Aires, Córdoba y Rosario</h3>
+                        <p class="body-text p-0 mb-0">Distribución de tickets exclusivos, banners y freebies para todos los asistentes.</p>
+                    </article>
                 </div>
+            </div>
+
+            <!-- Comunidad en Buenos Aires -->
+            <div class="col-lg-5">
+                <article class="myCard h-100 d-flex flex-column justify-content-between p-4">
+                    <div>
+                        <span class="body-secondary text-uppercase fw-bold">FANDOM LOCAL</span>
+                        <h2 class="title mb-2">Comunidad ARGmy en Buenos Aires</h2>
+                        <p class="body-text p-0 mb-3">Descubre la vibrante comunidad de fans de BTS en la Ciudad de Buenos Aires y puntos de encuentro masivos.</p>
+
+                        <figure class="event-img-container mb-3">
+                            <img class="img-fluid w-100" src="./assets/images/argmy.jpeg" alt="ARMYs argentinas en el Obelisco iluminado de morado">
+                        </figure>
+
+                        <div class="row text-center g-2 mb-3">
+                            <div class="col-6">
+                                <div class="metric-box p-3">
+                                    <h3 class="metric-number mb-0">+45.000</h3>
+                                    <span class="body-subtext">ARMYs Registrados</span>
+                                </div>
+                            </div>
+                            <div class="col-6">
+                                <div class="metric-box p-3">
+                                    <h3 class="metric-number mb-0">100%</h3>
+                                    <span class="body-subtext">Autogestionado</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <a href="./pages/contacto.html" class="button w-100 text-center">Ver más sobre la comunidad</a>
+                </article>
             </div>
         </section>
     </main>
 
+    <!-- FOOTER -->
     <footer>
         <p class="body-secondary">&copy; 2026 - Camila Dejtiar - BTS Argentina - Fandom No Oficial</p>
 
         <section>
-            <a href="https://x.com/BTSarg_official?t=rrPae3tg3PBvaRFoHedQDg&s=09&fbclid=PAZXh0bgNhZW0CMTEAAaeX1pFd1r65A3lvtIQu31ZHs_wYZYqp2aBVkAzNpk53U5eyiq9-EWwT4TfmUQ_aem_i-f9Xm8qYFep5UeehxPhEQ" target="_blank">
+            <a href="https://x.com/BTSarg_official" target="_blank">
                 <img src="./assets/images/x.png" alt="Logo de X">
             </a>
             <a href="https://www.instagram.com/btsargentina.official/" target="_blank">
                 <img src="./assets/images/instagram.png" alt="Logo de Instagram">
             </a>
-            <a href="https://www.tiktok.com/@btsargentina.official?_t=zm-8yldzhqjhkg&_r=1&fbclid=pazxh0bgnhzw0cmteaaaejpfto26rcn39sbpbgtfwojpzsxamhih-7tztny92qolzc6k7bep7dki5oeq_aem_xvmzns15_hucmgbfhd-syw" target="_blank">
+            <a href="https://www.tiktok.com/@btsargentina.official" target="_blank">
                 <img src="./assets/images/tiktok.png" alt="Logo de TikTok">
             </a>
         </section>
     </footer>
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js" integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI" crossorigin="anonymous"></script>
 </body>
 </html>
