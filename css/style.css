@@ -258,6 +258,30 @@ button:hover, .button:hover {
   border: 1px solid #232730;
 }
 
+.featured-album-card {
+  padding: clamp(1.6rem, 3vw, 3.2rem);
+}
+
+.featured-album-cover {
+  width: 100%;
+  aspect-ratio: 1;
+  overflow: hidden;
+  border: 1px solid #232730;
+  border-radius: 8px;
+  background-color: #101117;
+}
+.featured-album-cover img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.featured-album-description {
+  font-size: 1.5rem;
+  line-height: 1.7;
+}
+
 .logo-header {
   width: 45px;
   height: auto;
@@ -295,6 +319,36 @@ button:hover, .button:hover {
   border: 1px solid rgba(183, 138, 247, 0.25);
   border-radius: 8px;
   font-size: 1.8rem;
+}
+
+.tracklist-scroll-container {
+  max-height: 32rem;
+  overflow-y: auto;
+  overscroll-behavior: contain;
+}
+.tracklist-scroll-container li {
+  gap: 0.8rem;
+  line-height: 1.5;
+}
+.tracklist-scroll-container .body-text {
+  font-size: 1.5rem;
+}
+.tracklist-scroll-container li > div {
+  flex-shrink: 0;
+}
+.tracklist-scroll-container::-webkit-scrollbar {
+  width: 6px;
+}
+.tracklist-scroll-container::-webkit-scrollbar-track {
+  background: #101117;
+  border-radius: 4px;
+}
+.tracklist-scroll-container::-webkit-scrollbar-thumb {
+  background: rgba(183, 138, 247, 0.4);
+  border-radius: 4px;
+}
+.tracklist-scroll-container::-webkit-scrollbar-thumb:hover {
+  background: #b78af7;
 }
 
 form input, form textarea, form select {
