@@ -1,0 +1,41 @@
+@use "../utilities/variables" as *;
+
+.title, h1, h2, h3, h4 {
+  font-family: $font-titulos;
+  font-weight: 700;
+  color: $color-texto;
+}
+
+// Título principal en violeta lila pastel idéntico a la imagen
+.hero-title, .area-title {
+  font-size: 3.2rem;
+  color: $color-secundario !important;
+  text-align: center;
+}
+
+.title, h2 {
+  font-size: 2.2rem;
+  color: $color-texto; // Títulos de secciones en blanco
+}
+
+.subtitle, h3 {
+  font-size: 1.7rem;
+  color: $color-texto; // Títulos de tarjetas en blanco
+}
+
+.body-text {
+  font-size: 1.3rem;
+  color: $color-texto-muted;
+}
+
+.body-subtext {
+  font-size: 1.3rem;
+  color: $color-texto-muted;
+}
+
+.body-secondary {
+  font-size: 1.2rem;
+  color: $color-texto-subtext;
+  letter-spacing: 0.08em;
+  font-weight: 700;
+}

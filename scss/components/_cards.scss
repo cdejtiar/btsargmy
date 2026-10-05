@@ -1,0 +1,99 @@
+@use "../utilities/variables" as *;
+@use "../utilities/mixins" as *;
+
+.myCard {
+  background-color: $color-card-bg;
+  border: 1px solid $color-card-border;
+  border-radius: $radius-card;
+  padding: 2rem;
+  transition: $transition-main;
+
+  p {
+    color: $color-texto-muted;
+  }
+}
+
+// Cards de Servicios ("Lo que encontrarás")
+.service-card {
+  .icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 36px;
+    height: 36px;
+    background-color: $color-chip-bg;
+    border: 1px solid rgba($color-primario, 0.2);
+    border-radius: 8px;
+    font-size: 1.6rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .card-action-link {
+    color: $color-texto-muted;
+    font-size: 1.3rem;
+    font-weight: 500;
+    transition: $transition-main;
+
+    &:hover {
+      color: $color-secundario;
+    }
+  }
+}
+
+// Sub-cards oscuras de Novedades
+.area-cards .col-lg-7 .myCard {
+  background-color: $color-card-dark;
+  border: 1px solid $color-card-border;
+  border-radius: $radius-sm;
+
+  .subtitle {
+    color: $color-texto; // Títulos en blanco
+  }
+}
+
+// Métricas destacadas en violeta
+.metric-box {
+  background-color: $color-card-dark;
+  border: 1px solid $color-card-border;
+  border-radius: $radius-sm;
+
+  .metric-number {
+    color: $color-primario;
+    font-size: 2.2rem;
+    font-weight: 700;
+  }
+}
+
+.hero-card {
+  padding: 3.5rem 2rem;
+  background-color: $color-card-bg;
+}
+
+.hero-max-width {
+  max-width: 650px;
+}
+
+.hero-carousel {
+  border-radius: 12px;
+  max-width: 900px;
+  margin: 0 auto;
+  border: 1px solid $color-card-border;
+}
+
+.logo-header {
+  width: 45px;
+  height: auto;
+}
+
+.event-img-container {
+  width: 100%;
+  max-height: 220px;
+  overflow: hidden;
+  border-radius: $radius-sm;
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}

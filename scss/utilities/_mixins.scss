@@ -1,0 +1,19 @@
+@use "variables" as *;
+
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin card-style {
+  background-color: $color-card-bg;
+  border-radius: $radius-card;
+  box-shadow: $shadow-main;
+  transition: $transition-main;
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: $color-primario;
+  }
+}

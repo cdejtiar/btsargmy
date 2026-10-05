@@ -1,0 +1,27 @@
+@use "../utilities/variables" as *;
+
+form input, form textarea, form select {
+  color: $color-texto-oscuro;
+}
+
+.form-control-dark {
+  background-color: rgba($color-fondo-dark, 0.6);
+  border: 1.5px solid rgba($color-primario, 0.3);
+  border-radius: $radius-sm;
+  font-family: $font-cuerpo;
+  font-size: 1.5rem;
+  color: $color-texto;
+  padding: 1.2rem 1.6rem;
+  outline: none;
+  transition: $transition-main;
+
+  &:focus {
+    border-color: $color-secundario;
+    background-color: rgba($color-fondo-dark, 0.9);
+    box-shadow: 0 0 12px rgba($color-secundario, 0.4);
+  }
+
+  &::placeholder {
+    color: #8f8f8f;
+  }
+}

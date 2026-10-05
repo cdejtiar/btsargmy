@@ -1,0 +1,23 @@
+@use "../utilities/variables" as *;
+
+.containerMenu {
+  font-family: $font-titulos;
+  font-size: 1.4rem;
+  font-weight: 500;
+  gap: 1.5rem;
+  align-items: center;
+}
+
+.linkMenu {
+  color: $color-texto-muted !important;
+  transition: $transition-main;
+  padding: 0.5rem 1rem !important;
+
+  &:hover, &.active {
+    color: $color-secundario !important;
+  }
+
+  &::after {
+    display: none !important; // Eliminamos la línea gruesa inferior
+  }
+}
