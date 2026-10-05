@@ -97,3 +97,27 @@
     object-fit: cover;
   }
 }
+
+.search-icon-inside {
+  position: absolute;
+  left: 1.5rem;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1.4rem;
+  pointer-events: none;
+  opacity: 0.7;
+}
+
+.area-security {
+  .icon-box {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    background-color: $color-chip-bg;
+    border: 1px solid rgba($color-primario, 0.25);
+    border-radius: $radius-sm;
+    font-size: 1.8rem;
+  }
+}
