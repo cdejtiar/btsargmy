@@ -1,3 +1,14 @@
+.hero-tag, .news-chip {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Montserrat", sans-serif;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: all 0.2s ease-in-out;
+  text-decoration: none;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -43,20 +54,46 @@ figure {
   text-align: center;
   font-weight: bold;
 }
+@media (max-width: 768px) {
+  .hero-title, .area-title {
+    font-size: 2.4rem;
+    line-height: 1.2;
+  }
+}
+@media (max-width: 480px) {
+  .hero-title, .area-title {
+    font-size: 2rem;
+  }
+}
 
 .title, h2 {
   font-size: 2.2rem;
   color: #ffffff;
+}
+@media (max-width: 768px) {
+  .title, h2 {
+    font-size: 1.8rem;
+  }
 }
 
 .subtitle, h3 {
   font-size: 1.7rem;
   color: #ffffff;
 }
+@media (max-width: 576px) {
+  .subtitle, h3 {
+    font-size: 1.4rem;
+  }
+}
 
 .body-text {
   font-size: 1.3rem;
   color: #9ca3af;
+}
+@media (max-width: 576px) {
+  .body-text {
+    font-size: 1.15rem;
+  }
 }
 
 .body-subtext {
@@ -76,10 +113,20 @@ figure {
   border-bottom: 1px solid #232730;
   background-color: #0a0b0e;
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem 1.5rem;
+  }
+}
 
 .bg-custom {
   background-color: #16181e;
   border: 1px solid #232730;
+}
+@media (max-width: 576px) {
+  .bg-custom {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .navbar-toggler-icon {
@@ -118,7 +165,6 @@ footer {
 }
 footer section {
   display: flex;
-  flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 2rem;
@@ -132,16 +178,16 @@ button, .button {
   display: inline-block;
   width: fit-content;
   text-decoration: none;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease-in-out !important;
   border: none;
   border-radius: 50px;
   background-color: #b78af7;
   color: #ffffff;
-  font-family: "Montserrat", sans-serif;
   font-weight: 600;
   font-size: 1.3rem;
   text-align: center;
   padding: 0.8rem 1.8rem;
-  transition: all 0.2s ease-in-out !important;
 }
 button:hover, .button:hover {
   background-color: #d4b5ff;
@@ -153,14 +199,14 @@ button:hover, .button:hover {
   display: inline-block;
   width: fit-content;
   text-decoration: none;
+  font-family: "Inter", sans-serif;
+  transition: all 0.2s ease-in-out !important;
   border: 1px solid #232730;
   border-radius: 50px;
   background-color: #101117;
   color: #9ca3af;
-  font-family: "Montserrat", sans-serif;
   font-size: 1.2rem;
   padding: 0.6rem 1.4rem;
-  transition: all 0.2s ease-in-out !important;
 }
 .button-secondary:hover {
   border-color: #b78af7;
@@ -168,43 +214,53 @@ button:hover, .button:hover {
 }
 
 .hero-tag {
-  display: inline-block;
   background-color: #241a35;
   color: #d4b5ff;
   border: 1px solid rgba(183, 138, 247, 0.25);
-  border-radius: 50px;
   font-size: 1.1rem;
   padding: 0.4rem 1.4rem;
-  font-weight: 600;
   letter-spacing: 0.05em;
+}
+.hero-tag:hover {
+  filter: brightness(1.1);
 }
 
 .news-chip {
-  display: inline-block;
   background-color: #241a35;
   color: #d4b5ff;
   border: 1px solid rgba(183, 138, 247, 0.25);
-  border-radius: 50px;
   font-size: 1.1rem;
   padding: 0.2rem 1rem;
-  font-weight: 600;
+}
+.news-chip:hover {
+  filter: brightness(1.1);
 }
 
 .myCard {
   background-color: #16181e;
-  border: 1px solid #232730;
   border-radius: 16px;
-  padding: 2rem;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
   transition: all 0.2s ease-in-out;
+  border: 1px solid #232730;
+  padding: 2rem;
+}
+.myCard:hover {
+  transform: translateY(-4px);
+  border-color: #b78af7;
+}
+@media (max-width: 576px) {
+  .myCard {
+    padding: 1.2rem;
+  }
 }
 .myCard p {
   color: #9ca3af;
 }
 
 .service-card .icon-box {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
   width: 36px;
   height: 36px;
   background-color: #241a35;
@@ -242,10 +298,32 @@ button:hover, .button:hover {
   font-size: 2.2rem;
   font-weight: 700;
 }
+@media (max-width: 576px) {
+  .metric-box .metric-number {
+    font-size: 1.8rem;
+  }
+}
 
+@keyframes fadeInUp {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
 .hero-card {
   padding: 3.5rem 2rem;
   background-color: #16181e;
+  opacity: 0;
+  animation: fadeInUp 0.9s ease-out forwards;
+}
+@media (max-width: 768px) {
+  .hero-card {
+    padding: 2rem 1.2rem;
+  }
 }
 
 .hero-max-width {
@@ -282,10 +360,20 @@ button:hover, .button:hover {
   font-size: 1.5rem;
   line-height: 1.7;
 }
+@media (max-width: 576px) {
+  .featured-album-description {
+    font-size: 1.3rem;
+  }
+}
 
 .logo-header {
   width: 45px;
   height: auto;
+}
+@media (max-width: 576px) {
+  .logo-header {
+    width: 36px;
+  }
 }
 
 .event-img-container {
@@ -293,6 +381,11 @@ button:hover, .button:hover {
   max-height: 220px;
   overflow: hidden;
   border-radius: 8px;
+}
+@media (max-width: 576px) {
+  .event-img-container {
+    max-height: 160px;
+  }
 }
 .event-img-container img {
   width: 100%;
@@ -302,13 +395,18 @@ button:hover, .button:hover {
 
 .banner-preview {
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   width: 100%;
   height: clamp(22rem, 30vw, 34rem);
   overflow: hidden;
   border-radius: 8px;
   background-color: #16181e;
+}
+@media (max-width: 576px) {
+  .banner-preview {
+    height: 18rem;
+  }
 }
 .banner-preview img {
   display: block;
@@ -336,9 +434,9 @@ button:hover, .button:hover {
 }
 
 .area-security .icon-box {
-  display: inline-flex;
-  align-items: center;
+  display: flex;
   justify-content: center;
+  align-items: center;
   width: 40px;
   height: 40px;
   background-color: #241a35;

@@ -10,6 +10,7 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../css/style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
     <link
       rel="shortcut icon"
       href="../assets/images/army.png"
@@ -100,7 +101,7 @@
         </figure>
       </section>
 
-      <section class="content area-search mb-5">
+      <section class="content area-search mb-5" data-aos="fade-up">
         <div class="myCard p-4">
           <div class="mb-3">
             <span class="body-secondary text-uppercase fw-bold"
@@ -149,7 +150,7 @@
         <div class="products row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
           <div class="col">
             <article
-              class="product myCard h-100 d-flex flex-column justify-content-between p-4"
+              class="product myCard h-100 d-flex flex-column justify-content-between p-4" data-aos="zoom-in"
             >
               <div>
                 <span class="news-chip mb-2">Álbumes</span>
@@ -182,7 +183,7 @@
 
           <div class="col">
             <article
-              class="product myCard h-100 d-flex flex-column justify-content-between p-4"
+              class="product myCard h-100 d-flex flex-column justify-content-between p-4" data-aos="zoom-in"
             >
               <div>
                 <span class="news-chip mb-2">Lightstick</span>
@@ -214,7 +215,7 @@
 
           <div class="col">
             <article
-              class="product myCard h-100 d-flex flex-column justify-content-between p-4"
+              class="product myCard h-100 d-flex flex-column justify-content-between p-4" data-aos="zoom-in"
             >
               <div>
                 <span class="news-chip mb-2">Tour Merch</span>
@@ -247,7 +248,7 @@
 
           <div class="col">
             <article
-              class="product myCard h-100 d-flex flex-column justify-content-between p-4"
+              class="product myCard h-100 d-flex flex-column justify-content-between p-4" data-aos="zoom-in"
             >
               <div>
                 <span class="news-chip mb-2">BT21 & Peluches</span>
@@ -284,7 +285,7 @@
         <a class="button" href="./tienda.html">Ver todos los productos</a>
       </section>
 
-      <section class="area-security mb-5">
+      <section class="area-security mb-5" data-aos="fade-up">
         <div class="text-center mb-4">
           <span class="body-secondary text-uppercase fw-bold"
             >GARANTÍA FANBASE</span
@@ -389,5 +390,9 @@
       integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
       crossorigin="anonymous"
     ></script>
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+      AOS.init({ duration: 1000, once: true });
+    </script>
   </body>
 </html>

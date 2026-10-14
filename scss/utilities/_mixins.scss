@@ -11,15 +11,14 @@
   text-decoration: none;
 }
 
-%badge-base {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  font-family: $font-titulos;
-  font-weight: 600;
-  border-radius: 50px;
-  transition: $transition-main;
-  text-decoration: none;
+@mixin chip-theme($bg-color, $text-color: $color-secundario, $border-color: rgba($color-primario, 0.25)) {
+  background-color: $bg-color;
+  color: $text-color;
+  border: 1px solid $border-color;
+
+  &:hover {
+    filter: brightness(1.1);
+  }
 }
 
 @mixin flex-center {
