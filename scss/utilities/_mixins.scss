@@ -1,5 +1,27 @@
 @use "variables" as *;
 
+%badge-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-titulos;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: $transition-main;
+  text-decoration: none;
+}
+
+%badge-base {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: $font-titulos;
+  font-weight: 600;
+  border-radius: 50px;
+  transition: $transition-main;
+  text-decoration: none;
+}
+
 @mixin flex-center {
   display: flex;
   justify-content: center;

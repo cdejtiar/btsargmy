@@ -35,24 +35,16 @@ button, .button {
 }
 
 .hero-tag {
-  @include button-base;
-  background-color: $color-chip-bg;
-  color: $color-secundario;
-  border: 1px solid rgba($color-primario, 0.25);
-  border-radius: 50px;
+  @extend %badge-base;
+  @include chip-theme($color-chip-bg, $color-secundario);
   font-size: 1.1rem;
   padding: 0.4rem 1.4rem;
-  font-weight: 600;
   letter-spacing: 0.05em;
 }
 
 .news-chip {
-  @include button-base;
-  background-color: $color-chip-bg;
-  color: $color-secundario;
-  border: 1px solid rgba($color-primario, 0.25);
-  border-radius: 50px;
+  @extend %badge-base;
+  @include chip-theme($color-chip-bg, $color-secundario);
   font-size: 1.1rem;
   padding: 0.2rem 1rem;
-  font-weight: 600;
 }
