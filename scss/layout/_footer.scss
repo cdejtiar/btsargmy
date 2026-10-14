@@ -11,10 +11,7 @@
     margin-top: auto;
 
     section {
-        display: flex;
-        flex-direction: row;
-        justify-content: center;
-        align-items: center;
+        @include flex-center;
         gap: 2rem;
     }
 

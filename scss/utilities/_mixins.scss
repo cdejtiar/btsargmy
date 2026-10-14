@@ -17,3 +17,11 @@
     border-color: $color-primario;
   }
 }
+
+@mixin button-base {
+  display: inline-block;
+  width: fit-content;
+  text-decoration: none;
+  font-family: $font-cuerpo;
+  transition: $transition-main !important;
+}

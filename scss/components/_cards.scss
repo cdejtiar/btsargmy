@@ -2,11 +2,9 @@
 @use "../utilities/mixins" as *;
 
 .myCard {
-  background-color: $color-card-bg;
+  @include card-style;
   border: 1px solid $color-card-border;
-  border-radius: $radius-card;
   padding: 2rem;
-  transition: $transition-main;
 
   p {
     color: $color-texto-muted;
@@ -16,9 +14,7 @@
 // Cards de Servicios ("Lo que encontrarás")
 .service-card {
   .icon-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     width: 36px;
     height: 36px;
     background-color: $color-chip-bg;
@@ -47,7 +43,7 @@
   border-radius: $radius-sm;
 
   .subtitle {
-    color: $color-texto; // Títulos en blanco
+    color: $color-texto;
   }
 }
 
@@ -124,9 +120,7 @@
 }
 
 .banner-preview {
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  @include flex-center;
   width: 100%;
   height: clamp(22rem, 30vw, 34rem);
   overflow: hidden;
@@ -162,9 +156,7 @@
 
 .area-security {
   .icon-box {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
+    @include flex-center;
     width: 40px;
     height: 40px;
     background-color: $color-chip-bg;
