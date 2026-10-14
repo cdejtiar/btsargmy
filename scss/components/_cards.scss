@@ -6,12 +6,15 @@
   border: 1px solid $color-card-border;
   padding: 2rem;
 
+  @media (max-width: 576px) {
+    padding: 1.2rem;
+  }
+
   p {
     color: $color-texto-muted;
   }
 }
 
-// Cards de Servicios ("Lo que encontrarás")
 .service-card {
   .icon-box {
     @include flex-center;
@@ -36,7 +39,6 @@
   }
 }
 
-// Sub-cards oscuras de Novedades
 .area-cards .col-lg-7 .myCard {
   background-color: $color-card-dark;
   border: 1px solid $color-card-border;
@@ -47,7 +49,6 @@
   }
 }
 
-// Métricas destacadas en violeta
 .metric-box {
   background-color: $color-card-dark;
   border: 1px solid $color-card-border;
@@ -57,12 +58,20 @@
     color: $color-primario;
     font-size: 2.2rem;
     font-weight: 700;
+
+    @media (max-width: 576px) {
+      font-size: 1.8rem;
+    }
   }
 }
 
 .hero-card {
   padding: 3.5rem 2rem;
   background-color: $color-card-bg;
+
+  @media (max-width: 768px) {
+    padding: 2rem 1.2rem;
+  }
 }
 
 .hero-max-width {
@@ -99,11 +108,19 @@
 .featured-album-description {
   font-size: 1.5rem;
   line-height: 1.7;
+
+  @media (max-width: 576px) {
+    font-size: 1.3rem;
+  }
 }
 
 .logo-header {
   width: 45px;
   height: auto;
+
+  @media (max-width: 576px) {
+    width: 36px;
+  }
 }
 
 .event-img-container {
@@ -111,6 +128,10 @@
   max-height: 220px;
   overflow: hidden;
   border-radius: $radius-sm;
+
+  @media (max-width: 576px) {
+    max-height: 160px;
+  }
 
   img {
     width: 100%;
@@ -126,6 +147,10 @@
   overflow: hidden;
   border-radius: $radius-sm;
   background-color: $color-card-bg;
+
+  @media (max-width: 576px) {
+    height: 18rem;
+  }
 
   img {
     display: block;
@@ -166,7 +191,6 @@
   }
 }
 
-// Scrollbar personalizado para Tracklists
 .tracklist-scroll-container {
   max-height: 32rem;
   overflow-y: auto;

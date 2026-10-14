@@ -4,11 +4,19 @@
   padding: 1.5rem 3rem;
   border-bottom: 1px solid $color-card-border;
   background-color: $color-fondo-dark;
+
+  @media (max-width: 768px) {
+    padding: 1rem 1.5rem;
+  }
 }
 
 .bg-custom {
   background-color: $color-card-bg;
   border: 1px solid $color-card-border;
+
+  @media (max-width: 576px) {
+    padding: 0.5rem 1rem;
+  }
 }
 
 .navbar-toggler-icon {
