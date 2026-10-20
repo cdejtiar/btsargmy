@@ -5,7 +5,8 @@ Bienvenido al repositorio oficial del proyecto **BTS ARGmy**, un sitio web respo
 ---
 
 ## 🚀 Enlace al Sitio Desplegado (GitHub Pages)
-👉 **[Ver Sitio Web En Vivo](https://btsargmy.vercel.app/)**
+👉 **[Ver Sitio Web En GitHub Pages](https://cdejtiar.github.io/btsargmy/)**
+👉 **[Ver Sitio Web En Vercel](https://btsargmy.vercel.app/)**
 
 ---
 
